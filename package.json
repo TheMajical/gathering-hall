@@ -1,0 +1,19 @@
+{
+  "name": "gamehub",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["shared", "server", "client"],
+  "scripts": {
+    "build": "npm run build -w shared && npm run build -w server && npm run build -w client",
+    "test": "npm run build -w shared && npm run test -w shared && npm run test -w server",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w server && npm run typecheck -w client",
+    "dev:server": "npm run build -w shared && npm run build -w server && node server/dist/index.js",
+    "dev:client": "npm run dev -w client"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8",
+    "@types/node": "^22.10.0"
+  }
+}

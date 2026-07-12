@@ -1,0 +1,3 @@
+Recorded sound effects (.ogg) from Kenney game asset packs — kenney.nl
+(Casino Audio, Impact Sounds, Interface Sounds), licensed CC0 / public domain.
+Synthesized fallbacks (.wav) generated locally by scripts/gen-sounds.mjs.
