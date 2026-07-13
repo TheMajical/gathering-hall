@@ -3,10 +3,11 @@ import { chessSpec } from './games/chess/engine.js';
 import { coinflipSpec } from './games/coinflip/engine.js';
 import { cottonSpec } from './games/cotton/engine.js';
 import { hokmSpec } from './games/hokm/engine.js';
+import { othelloSpec } from './games/othello/engine.js';
 import { riskSpec } from './games/risk/engine.js';
 import { unoSpec } from './games/uno/engine.js';
 
-export const GAMES: GameSpec[] = [cottonSpec, riskSpec, hokmSpec, chessSpec, unoSpec, coinflipSpec];
+export const GAMES: GameSpec[] = [cottonSpec, riskSpec, hokmSpec, chessSpec, unoSpec, othelloSpec, coinflipSpec];
 
 export function getGameSpec(id: string): GameSpec | undefined {
   return GAMES.find((g) => g.id === id);

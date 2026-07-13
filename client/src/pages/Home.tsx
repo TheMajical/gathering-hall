@@ -33,7 +33,7 @@ export default function Home(): React.JSX.Element {
         <div style={{ fontSize: '2.6rem', color: 'var(--gold)' }}>&#11041;</div>
         <h1 style={{ fontSize: '3rem', margin: 0 }}>The Gathering Hall</h1>
         <p className="muted" style={{ marginTop: 6 }}>
-          Pull up a chair — Cotton, Risk, Hokm, Chess &amp; Uno await.
+          Pull up a chair — Cotton, Risk, Hokm, Chess, Uno &amp; Othello await.
         </p>
       </div>
 

@@ -5,6 +5,7 @@ import { ChessUI } from './chess/ChessTable.js';
 import { CoinflipUI } from './coinflip/CoinflipTable.js';
 import { CottonUI } from './cotton/CottonGame.js';
 import { HokmUI } from './hokm/HokmTable.js';
+import { OthelloUI } from './othello/OthelloTable.js';
 import { RiskUI } from './risk/RiskGame.js';
 import { UnoUI } from './uno/UnoTable.js';
 
@@ -22,5 +23,6 @@ export const GAME_UIS: Record<string, GameUI> = {
   hokm: HokmUI,
   chess: ChessUI,
   uno: UnoUI,
+  othello: OthelloUI,
   coinflip: CoinflipUI,
 };
