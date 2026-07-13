@@ -15,17 +15,25 @@ import { playerColor } from '../colors.js';
 import type { GameUI } from '../registry.js';
 
 function Card({ card, onClick, disabled, small }: { card: number; onClick?: () => void; disabled?: boolean; small?: boolean }): React.JSX.Element {
-  const suit = suitOf(card);
-  const red = suit === 0 || suit === 1;
+  const label = `${RANK_LABELS[rankOf(card)]}${SUIT_SYMBOLS[suitOf(card)]}`;
   return (
     <button
-      className={`hokm-card${red ? ' red' : ''}${small ? ' small' : ''}${onClick && !disabled ? ' playable' : ''}`}
+      className={`hokm-card${small ? ' small' : ''}${onClick && !disabled ? ' playable' : ''}${disabled ? ' dim' : ''}`}
       onClick={onClick}
       disabled={disabled || !onClick}
+      title={label}
     >
-      <span className="hokm-rank">{RANK_LABELS[rankOf(card)]}</span>
-      <span className="hokm-suit">{SUIT_SYMBOLS[suit]}</span>
+      <img src={`/cards/${card}.png`} alt={label} draggable={false} />
     </button>
+  );
+}
+
+function CardBack({ count }: { count: number }): React.JSX.Element {
+  return (
+    <span className="hokm-back" title={`${count} cards`}>
+      <img src="/cards/back.png" alt="" draggable={false} />
+      <span className="hokm-back-count">{count}</span>
+    </span>
   );
 }
 
@@ -71,7 +79,7 @@ function Table({ extras }: { extras: React.ReactNode }): React.JSX.Element {
                     {s.playerId === view.hakem && <span title="Hakem"> 👑</span>}
                     {s.playerId === partner && <span className="muted"> (partner)</span>}
                   </span>
-                  <span className="uno-mini-card">{view.handCounts[s.playerId]}</span>
+                  <CardBack count={view.handCounts[s.playerId]!} />
                   <span title="tricks this hand">🃏{view.tricksWon[s.playerId]}</span>
                 </div>
               );
@@ -111,9 +119,9 @@ function Table({ extras }: { extras: React.ReactNode }): React.JSX.Element {
           </div>
         </div>
 
-        {/* own hand */}
+        {/* own hand — overlapping fan */}
         {you !== null && (
-          <div className="uno-hand">
+          <div className="hokm-hand">
             {view.hand.map((c) => (
               <Card
                 key={c}

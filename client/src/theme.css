@@ -389,25 +389,45 @@ label { font-family: 'MedievalSharp', serif; color: var(--wood-dark); }
 /* hokm */
 .hokm-felt { flex-direction: column; gap: 18px; padding: 20px; justify-content: space-between; }
 .hokm-card {
-  width: 58px; height: 82px;
-  border-radius: 8px;
-  background: #fdfaf2;
-  border: 2px solid #3a2210;
-  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
-  font-family: Georgia, serif;
-  color: #1d1a16;
-  box-shadow: 0 4px 10px var(--shadow);
+  width: 76px;
+  padding: 0; border: none; background: none;
   cursor: default; flex: none;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  border-radius: 6px;
+  transition: transform 0.13s ease, filter 0.13s ease;
+  filter: drop-shadow(0 4px 6px rgba(20, 10, 2, 0.4));
 }
-.hokm-card.red { color: #b3271d; }
-.hokm-card .hokm-rank { font-size: 1.05rem; font-weight: 700; line-height: 1; }
-.hokm-card .hokm-suit { font-size: 1.7rem; line-height: 1.1; }
-.hokm-card.small { width: 42px; height: 60px; }
-.hokm-card.small .hokm-suit { font-size: 1.2rem; }
+.hokm-card img { width: 100%; display: block; border-radius: 6px; }
+.hokm-card.small { width: 48px; }
 .hokm-card.playable { cursor: pointer; }
-.hokm-card.playable:hover { transform: translateY(-8px); box-shadow: 0 10px 18px var(--shadow); }
-.hokm-card:disabled:not(.playable) { opacity: 0.55; }
+.hokm-card.playable:hover {
+  transform: translateY(-16px) scale(1.06);
+  filter: drop-shadow(0 12px 14px rgba(20, 10, 2, 0.5));
+  z-index: 5;
+}
+.hokm-card.dim { filter: grayscale(0.7) brightness(0.75) drop-shadow(0 3px 4px rgba(20, 10, 2, 0.35)); }
+
+/* overlapping fan for the hand */
+.hokm-hand {
+  display: flex; justify-content: center; align-items: flex-end;
+  padding: 18px 30px 10px;
+  background: rgba(19, 63, 52, 0.55);
+  border-radius: 12px;
+  min-height: 118px;
+  flex-wrap: wrap;
+}
+.hokm-hand .hokm-card { margin-left: -30px; position: relative; }
+.hokm-hand .hokm-card:first-child { margin-left: 0; }
+.hokm-hand .hokm-card.playable:hover { margin-right: 8px; }
+
+/* opponent card backs */
+.hokm-back { position: relative; display: inline-block; width: 30px; }
+.hokm-back img { width: 100%; display: block; border-radius: 3px; }
+.hokm-back-count {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 0.85rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
 .hokm-center { display: flex; align-items: center; gap: 24px; justify-content: center; min-height: 130px; }
 .hokm-trump {
   display: flex; flex-direction: column; align-items: center;
