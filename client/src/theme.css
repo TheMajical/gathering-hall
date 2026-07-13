@@ -386,6 +386,42 @@ label { font-family: 'MedievalSharp', serif; color: var(--wood-dark); }
 }
 .uno-color-btn:hover { transform: scale(1.12); }
 
+/* hokm */
+.hokm-felt { flex-direction: column; gap: 18px; padding: 20px; justify-content: space-between; }
+.hokm-card {
+  width: 58px; height: 82px;
+  border-radius: 8px;
+  background: #fdfaf2;
+  border: 2px solid #3a2210;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: Georgia, serif;
+  color: #1d1a16;
+  box-shadow: 0 4px 10px var(--shadow);
+  cursor: default; flex: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.hokm-card.red { color: #b3271d; }
+.hokm-card .hokm-rank { font-size: 1.05rem; font-weight: 700; line-height: 1; }
+.hokm-card .hokm-suit { font-size: 1.7rem; line-height: 1.1; }
+.hokm-card.small { width: 42px; height: 60px; }
+.hokm-card.small .hokm-suit { font-size: 1.2rem; }
+.hokm-card.playable { cursor: pointer; }
+.hokm-card.playable:hover { transform: translateY(-8px); box-shadow: 0 10px 18px var(--shadow); }
+.hokm-card:disabled:not(.playable) { opacity: 0.55; }
+.hokm-center { display: flex; align-items: center; gap: 24px; justify-content: center; min-height: 130px; }
+.hokm-trump {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--parch-light); border: 3px solid var(--gold);
+  border-radius: 12px; padding: 6px 14px;
+  box-shadow: 0 5px 14px var(--shadow);
+}
+.hokm-trump-suit { font-size: 2.2rem; line-height: 1.1; color: #1d1a16; }
+.hokm-trump-suit.red { color: #b3271d; }
+.hokm-trick { display: flex; gap: 14px; align-items: flex-end; }
+.hokm-played { display: flex; flex-direction: column; align-items: center; gap: 3px; color: rgba(241, 223, 178, 0.95); font-size: 0.8rem; }
+.hokm-lasttrick { display: flex; gap: 8px; opacity: 0.55; }
+.hokm-played.won .hokm-card { outline: 3px solid var(--gold-bright); }
+
 /* cotton */
 .cotton-steppers { display: flex; flex-direction: column; gap: 3px; margin-top: 6px; }
 .cotton-stepper { display: flex; align-items: center; gap: 8px; }

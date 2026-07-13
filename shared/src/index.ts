@@ -6,6 +6,8 @@ export * from './games/coinflip/engine.js';
 export * from './games/chess/engine.js';
 export * from './games/uno/cards.js';
 export * from './games/uno/engine.js';
+export * from './games/hokm/cards.js';
+export * from './games/hokm/engine.js';
 export * from './games/cotton/geometry.js';
 export * from './games/cotton/types.js';
 export * from './games/cotton/engine.js';
