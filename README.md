@@ -27,7 +27,7 @@ play over a LAN or national intranet. See [Offline & shutdown use](#offline--int
 ### Docker (recommended)
 
 ```bash
-git clone <your-repo-url> gathering-hall && cd gathering-hall
+git clone https://github.com/TheMajical/gathering-hall.git gathering-hall && cd gathering-hall
 docker compose up -d app        # game server on http://localhost:8080
 ```
 
