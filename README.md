@@ -17,6 +17,8 @@ play over a LAN or national intranet. See [Offline & shutdown use](#offline--int
 | 🏝 **Colonies of Cotton** | 3–4 | Settlers-style: snake draft, robber, dev cards, longest road / largest army, harbor & player trading, first to 10 VP |
 | 🌍 **Dominion** | 3–6 | Risk-style world conquest: escalating card trades, blitz dice, connected-path fortify |
 | 🂡 **Hokm** | 2–4 | Persian trick-taking card game |
+| 👑 **Shelem** | 4 | Persian trick-taking with bidding, 4-card widow, 165 total points, first to 660 |
+| ♠️ **Texas Hold'em Poker** | 2–8 | No-Limit Texas Hold'em: hole cards, community flop/turn/river, side-pots, full hand rankings |
 | ♟ **Chess** | 2 | Rules via chess.js, drag & drop or click-to-move, all draw rules |
 | 🃏 **Uno-style** | 2–8 | 108-card deck, draw-then-play, 2-player reverse = skip |
 | ⚫ **Othello** | 2 | Classic disc-flipping rules |

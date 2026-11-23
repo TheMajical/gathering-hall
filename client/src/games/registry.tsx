@@ -6,7 +6,9 @@ import { CoinflipUI } from './coinflip/CoinflipTable.js';
 import { CottonUI } from './cotton/CottonGame.js';
 import { HokmUI } from './hokm/HokmTable.js';
 import { OthelloUI } from './othello/OthelloTable.js';
+import { PokerUI } from './poker/PokerTable.js';
 import { RiskUI } from './risk/RiskGame.js';
+import { ShelemUI } from './shelem/ShelemTable.js';
 import { UnoUI } from './uno/UnoTable.js';
 
 export interface GameUI {
@@ -21,6 +23,8 @@ export const GAME_UIS: Record<string, GameUI> = {
   cotton: CottonUI,
   risk: RiskUI,
   hokm: HokmUI,
+  shelem: ShelemUI,
+  poker: PokerUI,
   chess: ChessUI,
   uno: UnoUI,
   othello: OthelloUI,
